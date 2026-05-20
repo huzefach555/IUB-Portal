@@ -20,16 +20,16 @@ img {
 /* Mobile adjustments for navbar and sections */
 @media (max-width: 768px) {
     .navbar {
-        position: static; /* prevent fixed overlay spacing */
+        position: fixed;
         width: 100%;
         left: 0;
         right: 0;
     }
     body {
-        padding-top: 0; /* remove extra top whitespace */
+        padding-top: 70px;
     }
     section {
-        padding: 3rem 1rem !important; /* tighter vertical spacing on mobile */
+        padding: 3rem 1rem !important;
     }
 }
 
@@ -40,6 +40,7 @@ body {
     color: #333;
     overflow-x: hidden;
     transition: background-color 0.4s ease, color 0.4s ease;
+    background-color: black;
 }
 
 section, .extension-box, .stat-card, h2, h3, p, li, .btn-secondary {
@@ -84,12 +85,44 @@ section, .extension-box, .stat-card, h2, h3, p, li, .btn-secondary {
     gap: 2rem;
 }
 
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+}
+
+.nav-links .whatsapp-btn-modern {
+    display: none;
 }
 
 .nav-links a::after {
@@ -190,13 +223,13 @@ section, .extension-box, .stat-card, h2, h3, p, li, .btn-secondary {
 }
 
 .hero-content {
-    padding-left: 100px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 4rem;
     flex-wrap: wrap;
+    padding: 0 2rem;
 }
 
 .hero-text {
@@ -700,6 +733,7 @@ body.night-mode .team-image img {
 .highlight-blue {
     background: linear-gradient(90deg, #3b82f6 0%, #06b6d4 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
@@ -707,6 +741,7 @@ body.night-mode .team-image img {
 body.night-mode .highlight-blue {
     background: linear-gradient(90deg, #60a5fa 0%, #22d3ee 100%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -1096,26 +1131,59 @@ body.night-mode .map-container-wrapper:hover .map-frame {
 @media (max-width: 768px) {
     .navbar {
         padding: 1rem;
-        position: relative;
+        position: fixed;
         box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
     
     .nav-container {
-        flex-direction: column;
-        gap: 1.2rem;
-        text-align: center;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    
+    .hamburger {
+        display: flex;
+        order: 3;
+    }
+    
+    .theme-toggle-btn {
+        order: 2;
+        margin-left: 1rem;
+    }
+    
+    .whatsapp-btn-modern.whatsapp-desktop {
+        display: none;
     }
     
     .nav-links {
-        justify-content: center;
-        gap: 1.2rem;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        flex-direction: column;
+        background: linear-gradient(135deg, #03002e 0%, #02001c 100%);
         width: 100%;
-        padding: 0.5rem 0;
-        flex-wrap: wrap;
+        padding: 2rem;
+        gap: 1.5rem;
+        transition: left 0.3s ease;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    
+    .nav-links.active {
+        left: 0;
     }
     
     .nav-links a {
-        font-size: 0.95rem;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.5rem;
+    }
+    
+    .nav-links .whatsapp-btn-modern {
+        display: inline-flex !important;
+        justify-content: center;
+        width: 100%;
+        margin-top: 1rem;
     }
     
     .theme-toggle-btn {
@@ -1123,7 +1191,7 @@ body.night-mode .map-container-wrapper:hover .map-frame {
     }
     
     .hero {
-        margin-top: 0;
+        margin-top: 70px;
         min-height: auto;
         padding: 5rem 1.5rem;
         background-attachment: scroll;
@@ -1132,7 +1200,7 @@ body.night-mode .map-container-wrapper:hover .map-frame {
     
     .hero-content {
         flex-direction: column;
-        padding-left: 0 !important;
+        padding: 0 !important;
         text-align: center;
     }
     

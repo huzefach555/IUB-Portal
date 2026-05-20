@@ -152,12 +152,42 @@ function initThemeToggle() {
     });
 }
 
+// Hamburger Menu Toggle
+function initHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+    
+    if (!hamburger || !navLinks) return;
+    
+    hamburger.addEventListener('click', function() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navLinks.contains(event.target)) {
+            hamburger.classList.remove('active');
+            navLinks.classList.remove('active');
+        }
+    });
+}
+
 // Initialize all functions
 document.addEventListener('DOMContentLoaded', function() {
     handleScrollAnimation();
     animateNumbers();
     handleNavbarScroll();
     initThemeToggle();
+    initHamburgerMenu();
 });
 
 // Add hover effect for feature cards
