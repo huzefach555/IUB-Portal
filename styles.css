@@ -18,18 +18,116 @@ img {
 }
 
 /* Mobile adjustments for navbar and sections */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .navbar {
         position: fixed;
         width: 100%;
         left: 0;
         right: 0;
+        padding: 0.9rem 1rem;
+    }
+    .nav-container {
+        position: relative;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0.7rem;
+    }
+    .hamburger {
+        display: flex;
+    }
+    .whatsapp-desktop {
+        display: none;
+    }
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(3, 0, 46, 0.98);
+        flex-direction: column;
+        gap: 0;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.35s ease, opacity 0.35s ease;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        z-index: 999;
+    }
+    .nav-links.active {
+        max-height: 1000px;
+    }
+    .nav-links li {
+        width: 100%;
+    }
+    .nav-links a,
+    .nav-links .whatsapp-btn-modern {
+        display: block;
+        width: 100%;
+        padding: 1rem 1.5rem;
+    }
+    .nav-links a {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .nav-links .whatsapp-btn-modern {
+        margin: 0.8rem 1rem 1rem;
+        border-radius: 999px;
     }
     body {
         padding-top: 70px;
     }
     section {
         padding: 3rem 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 1rem 3rem;
+        background-attachment: scroll;
+    }
+    .hero-content {
+        padding-left: 0;
+        gap: 2rem;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .hero-image img {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .software-content,
+    .extension-box,
+    .team-content,
+    .location-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .extension-box,
+    .software,
+    .extensions,
+    .features,
+    .audience,
+    .team,
+    .location {
+        padding: 3rem 1rem;
+    }
+    .feature-card,
+    .stat-card,
+    .contact-card {
+        padding: 1.5rem;
+    }
+    .section-title h2,
+    .location-header h2 {
+        font-size: 2.2rem;
+    }
+    .section-desc,
+    .software-text p,
+    .extension-content p,
+    .team-text p {
+        font-size: 1rem;
     }
 }
 
