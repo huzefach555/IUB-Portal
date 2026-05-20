@@ -54,23 +54,25 @@ function handleScrollAnimation() {
 
 // Number Counter Animation
 function animateNumbers() {
-    const statNumbers = document.querySelectorAll('.stat-number');
+    const audienceSection = document.querySelector('#audience');
+    if (!audienceSection) return;
     
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const target = parseInt(entry.target.getAttribute('data-target'));
-                animateValue(entry.target, 0, target, 2000);
+                const statNumbers = entry.target.querySelectorAll('.stat-number');
+                statNumbers.forEach(number => {
+                    const target = parseInt(number.getAttribute('data-target'));
+                    animateValue(number, 0, target, 2000);
+                });
                 observer.unobserve(entry.target);
             }
         });
     }, {
-        threshold: 0.5
+        threshold: 0.15
     });
     
-    statNumbers.forEach(number => {
-        observer.observe(number);
-    });
+    observer.observe(audienceSection);
 }
 
 function animateValue(element, start, end, duration) {
