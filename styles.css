@@ -223,13 +223,14 @@ section, .extension-box, .stat-card, h2, h3, p, li, .btn-secondary {
 }
 
 .hero-content {
+    padding-left: 150px;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     gap: 4rem;
     flex-wrap: wrap;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
 }
 
 .hero-text {
@@ -1365,6 +1366,61 @@ body.night-mode .map-info-text span {
     background: #FF5722;
     color: white;
     border-color: #FF5722;
+}
+
+.location-social {
+    margin-top: 1.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+}
+
+.location-social .social-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: #03002e;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    color: #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(3, 0, 46, 0.12);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+.location-social .social-icon:hover {
+    transform: translateY(-3px) scale(1.08);
+}
+
+.location-social .social-icon.instagram:hover {
+    background: #E1306C;
+    border-color: #E1306C;
+}
+
+.location-social .social-icon.linkedin:hover {
+    background: #0077B5;
+    border-color: #0077B5;
+}
+
+.location-social .social-icon.facebook:hover {
+    background: #1877F2;
+    border-color: #1877F2;
+}
+
+.location-social .social-icon.website:hover {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+}
+
+.location-social .social-icon.email:hover {
+    background: #F59E0B;
+    border-color: #F59E0B;
+}
+
+.location-social .social-icon.whatsapp:hover {
+    background: #25D366;
+    border-color: #25D366;
 }
 
 .footer-section h3 {
