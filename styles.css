@@ -2396,6 +2396,7 @@ body {
     }
 
     .team-image {
+        
         width: 100%;
         max-width: 320px;
     }
@@ -2636,6 +2637,7 @@ body {
     }
 
     .team-image img {
+        height:300px;
         border-width: 4px;
     }
 
