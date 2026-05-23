@@ -67,18 +67,34 @@ section, .extension-box, .stat-card, h2, h3, p, li, .btn-secondary {
 }
 
 .logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #FFA500;
     text-decoration: none;
     animation: pulse 2s infinite;
     cursor: pointer;
-    transition: color 0.3s ease, text-shadow 0.3s ease;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FFA500;
+    letter-spacing: 1px;
 }
 
 .logo:hover {
+    transform: scale(1.05);
+}
+
+.logo:hover .logo-text {
     color: #FF8C00;
-    text-shadow: 0 0 10px rgba(255, 165, 0, 0.5);
 }
 
 @keyframes pulse {
