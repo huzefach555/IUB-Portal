@@ -10,12 +10,12 @@
     <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">IUB Portal</div>
-            <div class="hamburger" id="hamburger">
+            <a href="#home" class="logo">IUB Portal</a>
+            <button class="hamburger" id="hamburger" type="button" aria-label="Open navigation menu" aria-controls="nav-links" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
             <ul class="nav-links" id="nav-links">
                 <li><a href="#software">Software</a></li>
                 <li><a href="#extension">Extension</a></li>
@@ -187,8 +187,9 @@
 
     <!-- Features Section -->
     <section class="features" id="features">
-        <div class="section-title">
-            <h2>Awesome Features</h2>
+        <div class="features-header">
+            <h2>Why Choose Us?</h2>
+            <p>Our commitment to your success goes beyond just portals and tools. Discover the unique benefits that set us apart and ensure you have the best experience with IUB Portals.</p>
         </div>
         <div class="features-grid">
             <div class="feature-card">
@@ -213,6 +214,8 @@
             </div>
         </div>
     </section>
+
+    
 
     <!-- Audience Section -->
     <section class="audience" id="audience">
@@ -242,6 +245,108 @@
                 </div>
                 <!-- <div class="stat-label">5 Stars</div> -->
                 <div class="stat-name">Feedback</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IUB Sticker App Section -->
+    <section class="sticker-showcase" id="sticker">
+        <div class="sticker-background">
+            <div class="sticker-blob sticker-blob-1"></div>
+            <div class="sticker-blob sticker-blob-2"></div>
+        </div>
+        
+        <div class="sticker-container">
+            <div class="sticker-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-content">
+                            <div class="sticker-preview">
+                                <img src="images/iub_sticker.png" alt="IUB Sticker">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-stickers">
+                    <span class="floating-sticker sticker-1">🎓</span>
+                    <span class="floating-sticker sticker-2">📱</span>
+                    <span class="floating-sticker sticker-3">✨</span>
+                    <span class="floating-sticker sticker-4">🎨</span>
+                </div>
+            </div>
+
+            <div class="sticker-content">
+                <div class="sticker-badge">
+                    <span class="badge-text">NEW & EXCLUSIVE</span>
+                </div>
+                
+                <h2 class="sticker-title">IUB Sticker Pack</h2>
+                <p class="sticker-subtitle">Express Your University Pride</p>
+                
+                <p class="sticker-description">
+                    Add a touch of Islamia University spirit to your messages! Our exclusive sticker pack features premium, HD-quality designs celebrating the university's heritage, student life, and academic excellence.
+                </p>
+
+                <div class="sticker-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">✨</div>
+                        <div class="feature-text">
+                            <h4>Premium Quality</h4>
+                            <p>High-definition graphics</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎨</div>
+                        <div class="feature-text">
+                            <h4>Unique Designs</h4>
+                            <p>100+ exclusive stickers</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📲</div>
+                        <div class="feature-text">
+                            <h4>Easy to Use</h4>
+                            <p>Works with all apps</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🎁</div>
+                        <div class="feature-text">
+                            <h4>Free Download</h4>
+                            <p>No hidden costs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="download-buttons">
+                    <a href="https://play.google.com/store" target="_blank" class="download-btn android-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M17.6915026,0.896845277 C17.4394172,0.561547408 17.0152037,0.561547408 16.7631183,0.896845277 L3.50612381,18.4744231 C3.28647841,18.8191501 3.52623087,19.2919701 3.89362791,19.2919701 L8.77621505,19.2919701 L8.77621505,24.0744522 C8.77621505,24.4347413 9.06346707,24.7465175 9.41412403,24.7465175 L14.2347078,24.7465175 C14.5853648,24.7465175 14.8726168,24.4347413 14.8726168,24.0744522 L14.8726168,19.2919701 L19.7552039,19.2919701 C20.1225901,19.2919701 20.362251,18.8194622 20.1426056,18.4744231 Z"/>
+                        </svg>
+                        <span>Google Play</span>
+                    </a>
+                    <a href="https://apps.apple.com" target="_blank" class="download-btn ios-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71,19.5c-.83,1.95-1.48,2.53-3,3.76-2.36,2.08-5.74,2.05-7.44,2.05-1.22,0-4.02-.37-5.33-2.5-2.15-3.51-.56-8.59.92-10.55C5.6,7.72,8.05,7.25,10.06,7.25c.78,0,1.52.04,2.2.13,1.91.3,3.35-.99,4.73-.99,1.08,0,2.3.19,2.65.3,1.1.4.6,2.6-.3,4.08-.7,1.19-1.7,2.64-2.52,3.9C12.47,16.5,12.8,17.75,14.5,19.5Z M12,2A10,10,0,0,0,9.26,16.69c.5.8,1.12,1.54,2,2.12.85.55,1.72,1,2.74,1,.59,0,1.19-.07,1.85-.19,1.4-.27,2.86-1.63,4.12-2.9,1.19-1.23,2.13-2.85,2.57-4.5.36-1.33.58-2.75.58-4.23A10,10,0,0,0,12,2Z"/>
+                        </svg>
+                        <span>App Store</span>
+                    </a>
+                </div>
+
+                <div class="sticker-stats">
+                    <div class="stat">
+                        <span class="stat-value">100+</span>
+                        <span class="stat-label">Stickers</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">4.8★</span>
+                        <span class="stat-label">Rating</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">50K+</span>
+                        <span class="stat-label">Downloads</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -381,7 +486,7 @@
                     </svg>
                 </div>
                 <div class="map-frame">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.5!2d71.7626388!3d29.3788293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b91d700eac173%3A0x1bc6048ec98cce78!2sThe%20Islamia%20University%20of%20Bahawalpur%20-%20IUB%20Baghdad-ul-Jadeed%20Campus!5e0!3m2!1sen!2s!4v1716136800000!5m2!1sen!2s" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3474.5!2d71.7626388!3d29.3788293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x393b91d700eac173%3A0x1bc6048ec98cce78!2sThe%20Islamia%20University%20of%20Bahawalpur%20-%20IUB%20Baghdad-ul-Jadeed%20Campus!5e0!3m2!1sen!2s!4v1716136800000!5m2!1sen!2s" title="IUB Baghdad-ul-Jadeed Campus map" width="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
                 <div class="location-social" aria-label="IUB social links">
                     <a href="https://wa.me/?text=Hello%20Islamia%20University%20of%20Bahawalpur" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
