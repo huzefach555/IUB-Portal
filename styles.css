@@ -2101,11 +2101,11 @@ body.night-mode .team {
 }
 
 body.night-mode .features-header h2 {
-    color: #f8fafc;
+    color: #000000;
 }
 
 body.night-mode .features-header p {
-    color: #cbd5e1;
+    color: #000000;
 }
 
 body.night-mode .feature-card {
@@ -2115,7 +2115,9 @@ body.night-mode .feature-card {
 }
 
 body.night-mode .feature-card:not(:first-child):hover {
-    background: #334155;
+    
+    background: linear-gradient(135deg, #03002e 0%, #02001c 100%);
+
 }
 
 body.night-mode .feature-card p {
