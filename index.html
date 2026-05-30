@@ -123,70 +123,193 @@
 
     <!-- Extensions Section -->
     <section class="extensions" id="extension">
-        <div class="section-title">
-            <h2>Chrome Extension</h2>
-            <p>Download Zip File than Export. Open Chrome than go to Manage Extension. Developer Mode on than Load Unpacked Extension.</p>
+        <!-- Header -->
+        <div class="ext-section-header">
+            <div class="ext-eyebrow">
+                Browser Extensions
+            </div>
+            <h2 class="ext-title">Supercharge your <span>browser</span></h2>
+            <p class="ext-subtitle">Install IUB extensions and access every portal instantly — no tab hunting, no wasted time.</p>
         </div>
         
-        <!-- Box 1 -->
-        <div class="extension-box">
-            <div class="extension-carousel">
-                <div class="carousel-images" id="carousel1">
-                    <img src="images/extensions/IUB_Portal/Transport_schedule.jpg" alt="Transport Schedule">
+        <!-- Cards Grid -->
+        <div class="ext-grid">
+            
+            <!-- Card 1: IUB Portal Extension -->
+            <div class="ext-card featured">
+                <div class="ribbon">Popular</div>
+                
+                <div class="img-slider" id="sl0">
+                    <img src="images/extensions/IUB_Portal/Transport_schedule.jpg" class="active" alt="Transport Schedule">
                     <img src="images/extensions/IUB_Portal/all_in_one.jpg" alt="All in One">
                     <img src="images/extensions/IUB_Portal/merit_list.jpg" alt="Merit List">
                     <img src="images/extensions/IUB_Portal/unnamed.jpg" alt="IUB Portal">
                     <img src="images/extensions/IUB_Portal/unnamed (1).jpg" alt="IUB Portal 2">
+                    <button class="slide-nav prev" onclick="slide(0,-1)">❮</button>
+                    <button class="slide-nav next" onclick="slide(0,+1)">❯</button>
+                    <div class="slide-dots" id="d0"></div>
+                </div>
+                
+                <div class="thumb-strip" id="t0"></div>
+                
+                <div class="card-body">
+                    <div class="card-top">
+                        <div class="card-icon blue">🔗</div>
+                        <div>
+                            <div class="card-title">IUB Portal Extension</div>
+                            <div class="card-desc">All portals · one click</div>
+                        </div>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">📧 E-Portal</span>
+                        <span class="chip">📚 LMS</span>
+                        <span class="chip">📅 Timetable</span>
+                        <span class="chip">🚌 Transport</span>
+                        <span class="chip">🏆 Merit list</span>
+                        <span class="chip">🎓 My IUB</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://chromewebstore.google.com/detail/iub-portals-all-in-one/jdnbbflemleecikpjliaijdgijmmnjfk" target="_blank" class="btn-chrome primary">
+                            Add to Chrome
+                        </a>
+                        <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn-icon" title="Watch guide">
+                            ▶
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="extension-content">
-                <h3>IUB Portal Extension</h3>
-                <p>Access all IUB portals directly from your browser with one click. Get quick access to e-portal, my iub, LMS, and more.</p>
-                <div class="extension-buttons">
-                    <a href="https://chromewebstore.google.com/detail/iub-portals-all-in-one/jdnbbflemleecikpjliaijdgijmmnjfk" target="_blank" class="btn btn-primary">Download Extension</a>
-                    <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn btn-secondary">Visual Guide</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Box 2 -->
-        <div class="extension-box">
-            <div class="extension-content">
-                <h3>IUB Portal New Tab</h3>
-                <p>Transform your new tab page into a productive IUB portal hub. Quick access to all university resources.</p>
-                <div class="extension-buttons">
-                    <a href="https://chromewebstore.google.com/detail/iub-portals-new-tab/dhoajaooljjmgeplahpmopobgikhadjp" target="_blank" class="btn btn-primary">Download Extension</a>
-                    <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn btn-secondary">Visual Guide</a>
-                </div>
-            </div>
-            <div class="extension-carousel">
-                <div class="carousel-images" id="carousel2">
-                    <img src="images/extensions/IUB_Portal_New_Tab/unnamed.jpg" alt="New Tab 1">
+            
+            <!-- Card 2: IUB New Tab -->
+            <div class="ext-card">
+                <div class="img-slider" id="sl1">
+                    <img src="images/extensions/IUB_Portal_New_Tab/unnamed.jpg" class="active" alt="New Tab 1">
                     <img src="images/extensions/IUB_Portal_New_Tab/unnamed (1).jpg" alt="New Tab 2">
                     <img src="images/extensions/IUB_Portal_New_Tab/unnamed (2).jpg" alt="New Tab 3">
                     <img src="images/extensions/IUB_Portal_New_Tab/unnamed (3).jpg" alt="New Tab 4">
                     <img src="images/extensions/IUB_Portal_New_Tab/unnamed (4).jpg" alt="New Tab 5">
+                    <button class="slide-nav prev" onclick="slide(1,-1)">❮</button>
+                    <button class="slide-nav next" onclick="slide(1,+1)">❯</button>
+                    <div class="slide-dots" id="d1"></div>
+                </div>
+                
+                <div class="thumb-strip" id="t1"></div>
+                
+                <div class="card-body">
+                    <div class="card-top">
+                        <div class="card-icon green">🌐</div>
+                        <div>
+                            <div class="card-title">IUB New Tab</div>
+                            <div class="card-desc">Productive start page</div>
+                        </div>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">📊 Dashboard</span>
+                        <span class="chip">⏱️ Quick links</span>
+                        <span class="chip">🖼️ Wallpaper</span>
+                        <span class="chip">☀️ Greeting</span>
+                        <span class="chip">🔖 Saved links</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://chromewebstore.google.com/detail/iub-portals-new-tab/dhoajaooljjmgeplahpmopobgikhadjp" target="_blank" class="btn-chrome primary">
+                            Add to Chrome
+                        </a>
+                        <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn-icon" title="Watch guide">
+                            ▶
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Box 3 -->
-        <div class="extension-box">
-            <div class="extension-carousel">
-                <div class="carousel-images" id="carousel3">
-                    <img src="images/extensions/IUB_Portal_Theme/unnamed.jpg" alt="Theme 1">
+            
+            <!-- Card 3: IUB Theme -->
+            <div class="ext-card">
+                <div class="img-slider" id="sl2">
+                    <img src="images/extensions/IUB_Portal_Theme/unnamed.jpg" class="active" alt="Theme 1">
                     <img src="images/extensions/IUB_Portal_Theme/unnamed (5).jpg" alt="Theme 2">
+                    <button class="slide-nav prev" onclick="slide(2,-1)">❮</button>
+                    <button class="slide-nav next" onclick="slide(2,+1)">❯</button>
+                    <div class="slide-dots" id="d2"></div>
+                </div>
+                
+                <div class="thumb-strip" id="t2"></div>
+                
+                <div class="card-body">
+                    <div class="card-top">
+                        <div class="card-icon amber">🎨</div>
+                        <div>
+                            <div class="card-title">IUB Portal Theme</div>
+                            <div class="card-desc">University-branded browser</div>
+                        </div>
+                    </div>
+                    <div class="chips">
+                        <span class="chip">🎯 IUB colours</span>
+                        <span class="chip">🖌️ Custom toolbar</span>
+                        <span class="chip">✨ Unique style</span>
+                        <span class="chip">💻 Full browser</span>
+                    </div>
+                    <div class="card-actions">
+                        <a href="https://chromewebstore.google.com/detail/iub-portals-theme/mlabgklnlokimmbcnbpcnoopgnghffdf" target="_blank" class="btn-chrome primary">
+                            Add to Chrome
+                        </a>
+                        <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn-icon" title="Watch guide">
+                            ▶
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="extension-content">
-                <h3>IUB Portal Theme</h3>
-                <p>Customize your browser with IUB themed extensions. Show your university pride with beautiful themes.</p>
-                <div class="extension-buttons">
-                    <a href="https://chromewebstore.google.com/detail/iub-portals-theme/mlabgklnlokimmbcnbpcnoopgnghffdf" target="_blank" class="btn btn-primary">Download Extension</a>
-                    <a href="https://youtu.be/t1FMQbWOWOU" target="_blank" class="btn btn-secondary">Visual Guide</a>
+            
+        </div><!-- /ext-grid -->
+        
+        <!-- Stats strip -->
+        <div class="ext-stats-strip">
+            <div class="ext-stat-card">
+                <div class="stat-icon">🧩</div>
+                <div class="stat-val">3</div>
+                <div class="stat-lbl">Extensions</div>
+            </div>
+            <div class="ext-stat-card">
+                <div class="stat-icon">⚡</div>
+                <div class="stat-val">1-click</div>
+                <div class="stat-lbl">Portal access</div>
+            </div>
+            <div class="ext-stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-val">4.8</div>
+                <div class="stat-lbl">Avg rating</div>
+            </div>
+            <div class="ext-stat-card">
+                <div class="stat-icon">🎓</div>
+                <div class="stat-val">Free</div>
+                <div class="stat-lbl">Always</div>
+            </div>
+        </div>
+        
+        <!-- Install guide -->
+        <div class="ext-install-row">
+            <p class="install-title">How to install</p>
+            <div class="ext-steps">
+                <div class="ext-step">
+                    <div class="step-dot">🔗</div>
+                    <div class="step-label">Click install</div>
+                    <div class="step-desc">Open Chrome Store link</div>
+                </div>
+                <div class="ext-step">
+                    <div class="step-dot">➕</div>
+                    <div class="step-label">Add extension</div>
+                    <div class="step-desc">Hit "Add to Chrome"</div>
+                </div>
+                <div class="ext-step">
+                    <div class="step-dot">📌</div>
+                    <div class="step-label">Pin it</div>
+                    <div class="step-desc">Pin to your toolbar</div>
+                </div>
+                <div class="ext-step">
+                    <div class="step-dot">🚀</div>
+                    <div class="step-label">Done!</div>
+                    <div class="step-desc">All portals at a click</div>
                 </div>
             </div>
         </div>
+        
     </section>
 
     <!-- Features Section -->

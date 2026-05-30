@@ -1,4 +1,77 @@
-// Image Carousel Functionality
+// Extension Slider Functionality (New Design)
+function initExtensionSliders() {
+    // Initialize all sliders
+    for (let i = 0; i < 3; i++) {
+        initSlider(i);
+    }
+}
+
+function initSlider(sliderId) {
+    const slider = document.getElementById(`sl${sliderId}`);
+    if (!slider) return;
+    
+    const images = slider.querySelectorAll('img');
+    const dotsContainer = document.getElementById(`d${sliderId}`);
+    const thumbContainer = document.getElementById(`t${sliderId}`);
+    
+    if (images.length === 0) return;
+    
+    // Create dots
+    images.forEach((img, idx) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = idx === 0 ? 'on' : '';
+        dot.addEventListener('click', () => showImage(sliderId, idx));
+        dotsContainer.appendChild(dot);
+    });
+    
+    // Create thumbnails
+    images.forEach((img, idx) => {
+        const thumb = document.createElement('div');
+        thumb.className = `thumb ${idx === 0 ? 'active' : ''}`;
+        thumb.innerHTML = `<img src="${img.src}" alt="Thumbnail ${idx + 1}">`;
+        thumb.addEventListener('click', () => showImage(sliderId, idx));
+        thumbContainer.appendChild(thumb);
+    });
+    
+    // Auto-advance slides every 4 seconds
+    setInterval(() => {
+        const current = Array.from(images).findIndex(img => img.classList.contains('active'));
+        showImage(sliderId, (current + 1) % images.length);
+    }, 4000);
+}
+
+function slide(sliderId, direction) {
+    const slider = document.getElementById(`sl${sliderId}`);
+    const images = slider.querySelectorAll('img');
+    const current = Array.from(images).findIndex(img => img.classList.contains('active'));
+    const next = (current + direction + images.length) % images.length;
+    showImage(sliderId, next);
+}
+
+function showImage(sliderId, index) {
+    const slider = document.getElementById(`sl${sliderId}`);
+    const images = slider.querySelectorAll('img');
+    const dots = document.querySelectorAll(`#d${sliderId} button`);
+    const thumbs = document.querySelectorAll(`#t${sliderId} .thumb`);
+    
+    // Update images
+    images.forEach((img, idx) => {
+        img.classList.toggle('active', idx === index);
+    });
+    
+    // Update dots
+    dots.forEach((dot, idx) => {
+        dot.classList.toggle('on', idx === index);
+    });
+    
+    // Update thumbnails
+    thumbs.forEach((thumb, idx) => {
+        thumb.classList.toggle('active', idx === index);
+    });
+}
+
+// Image Carousel Functionality (Legacy)
 function startCarousel(carouselId, interval = 3000) {
     const carousel = document.getElementById(carouselId);
     if (!carousel) return;
@@ -26,11 +99,12 @@ function startCarousel(carouselId, interval = 3000) {
     setInterval(rotateImages, interval);
 }
 
-// Initialize all carousels
+// Initialize all carousels and sliders
 document.addEventListener('DOMContentLoaded', function() {
     startCarousel('carousel1', 3000);
     startCarousel('carousel2', 3000);
     startCarousel('carousel3', 3000);
+    initExtensionSliders();
 });
 
 // Scroll Animation
@@ -223,5 +297,3 @@ window.addEventListener('scroll', function() {
 
     hero.style.backgroundPositionY = window.pageYOffset * 0.5 + 'px';
 }, { passive: true });
-
-
